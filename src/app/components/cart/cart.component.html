@@ -1,0 +1,22 @@
+<div class="container">
+    <div class="row justify-content-center mt-5">
+        @for (item of cartStoredProducts; track $index) {
+            <div class="col-md-8 col-sm-10 col-12 p-3">
+                <div class="card h-100 shadow-sm rounded-3 border-0 p-4">
+                    <div class="row align-items-center">
+                        <div class="col-md-5 col-12 mb-3 mb-md-0 d-flex justify-content-center">
+                            <img src="{{item.image}}" width="150" class="img-fluid rounded">
+                        </div>
+                        <div class="col-md-7 col-12 text-center text-md-start">
+                            <h4 class="fw-bold">{{item.title}}</h4>
+                            <p class="text-muted fs-5">Price: <span class="fw-bold text-primary">INR {{item.price}}</span></p>
+                            <p class="fs-6">{{item.description}}</p>
+                            <p class="text-warning fw-bold">Rating: {{item.rate}} ⭐</p>
+                            <p class="text-danger fw-bold">Stock Left: {{item.count}}</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        }
+    </div>
+</div>
